@@ -380,7 +380,7 @@ func main() {
 	doneDict := make(map[string]bool)
 	sound_url := make(map[string]string)
 	all_inflect := make(map[string]string)
-	files_raws, _ := os.ReadDir(`E:\Golang\mw\raws`)
+	files_raws, _ := os.ReadDir(`F:\GitHub\MW-Wrapper\raws`)
 	for _, file := range files_raws {
 		kk := file.Name()
 		kkpure := strings.Replace(kk[:len(kk)-5], "_", "/", -1)
@@ -443,7 +443,7 @@ func main() {
 		}
 		file2.Close()
 	}
-	files_thsr, _ := os.ReadDir(`E:\Golang\mw\thsr`)
+	files_thsr, _ := os.ReadDir(`F:\GitHub\MW-Wrapper\thsr`)
 	for _, file := range files_thsr {
 		kk := file.Name()
 		kkpure := kk[:len(kk)-5]

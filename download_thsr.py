@@ -70,7 +70,7 @@ def download(url, entry, t='data'):
     while retry > 0:
         try:
             if t == 'data':
-                outpath = 'E:/Golang/mw/thsr/' + entry + '.html'
+                outpath = 'F:/GitHub/MW-Wrapper/thsr/' + entry + '.html'
                 if os.path.isfile(outpath):
                     try:
                         print("had:", entry)
@@ -82,7 +82,7 @@ def download(url, entry, t='data'):
                 except:
                     pass
             else:
-                outpath = 'E:/Golang/mw/catelogs/' + entry + '.html'
+                outpath = 'F:/GitHub/MW-Wrapper/catelogs/' + entry + '.html'
             allentry.add(entry)
             sum += 1
             if (sum % 900) == 0:
@@ -100,7 +100,7 @@ def download(url, entry, t='data'):
                             f.write(data)
                             ob += data
                 except:
-                    with open('E:/Golang/mw/thsr/0error' + str(sum) + '.html', 'wb') as f:
+                    with open('F:/GitHub/MW-Wrapper/thsr/0error' + str(sum) + '.html', 'wb') as f:
                         for data in r.iter_content(1024):
                             f.write(data)
                             ob += data
